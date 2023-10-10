@@ -1,0 +1,51 @@
+/* Apply the common tile styles using the mixin */
+.tile {
+    @include tile-styles;
+}
+
+/* Style for elements with class .tile-first-color */
+.tile-first-color {
+    background-color:$tile-first-color-bg; 
+}
+
+/* Style for tile components */
+.tile-text {
+    font-size: $tile-text-font-size;
+    margin-top: $tile-text-margin-top;
+    margin-left: $tile-text-margin-left;
+}
+
+/* Style for h1 elements within .tile-first-color */
+.tile-first-color h1 {
+    margin-top: $tile-first-color-h1-margin-top;
+}
+
+/* Style for h1 elements within .tile-first-color */
+.tile-first-color h1 {
+    margin-top: $tile-first-color-margin-top;
+}
+
+/* Style for elements with class .box */
+.box {
+    width: width( "40px" );
+    height: height("40px" );
+    background-color:  invert( $box-background-color, 80%);  
+    text-align: $center-align-items;
+    line-height: 50px;
+    border: 2px solid $box-border-color;
+}
+
+/* Style for elements with class .box-text */
+.box-text {
+    margin-top: $box-text-margin-top;
+}
+
+/* Style for elements with class .box1 */
+.box1 {
+    @include common-box-styles(1120px, null, 2, 400px);
+}
+
+/* Style for elements with class .box2 */
+.box2 {
+    @include common-box-styles(300px, 80px, 1, null);
+}

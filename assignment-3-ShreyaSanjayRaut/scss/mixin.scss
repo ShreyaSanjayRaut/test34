@@ -1,0 +1,212 @@
+// Mixin for flexbox alignment and padding
+@mixin flex-center-padding($padding-left, $font-weight) {
+    display: flex;
+    align-items: center;
+    padding-left: $padding-left;
+    font-weight: $font-weight;
+}
+
+/* Mixin for flexbox alignment and margin-bottom */
+@mixin flex-align-margin($margin-bottom) {
+    display: flex;
+    align-items: center;
+    margin-bottom: $margin-bottom;
+}
+
+/* Mixin for image styles within elements with class .item */
+@mixin item-image {
+    max-width: 20px;
+    margin-right: 10px;
+}
+
+/* Mixin for overlay button for displaying button over an image */
+@mixin overlay-button {
+    position: absolute;
+    top: 105%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(155, 211, 187, 1);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Mixin for menu link styles within elements with class .menu */
+@mixin menu-link {
+    text-decoration: none;
+    position: relative;
+}
+
+/* Mixin for hover link effect */
+@mixin hover-link-effect {
+    &:hover {
+        padding-bottom: 5px;
+        border-bottom: 5px solid #9bd3bb;
+    }
+}
+
+/* Mixin for breadcrumb item styles */
+@mixin breadcrumb-item {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+    color: black;
+    &:not(:last-child)::after {
+        content: ' >\00a0 ';
+        position: absolute;
+        right: -23px;
+        font-size: 20px; /* Corrected from "size" to "font-size" */
+        color: black;
+        font-weight: bolder;
+    }
+}
+
+/* Mixin for common tile styles */
+@mixin tile-styles {
+    width: $tile-width;
+    height: $tile-height;
+    background-color: $tile-bg-color;
+    margin: $tile-margin;
+    float: left;
+    border: 1px solid $tile-border-color;
+    box-shadow: 0 0 10px $tile-box-shadow-color;
+    border-radius: $tile-border-radius;
+    transition: background-color $tile-transition-duration;
+    padding-left: $tile-padding-left;
+}
+
+/* Mixin for link styles */
+@mixin link-styles {
+    color: $text-color-red;
+    font-family: $font-family-sans-serif;
+    text-decoration: none;
+}
+
+/* Define a mixin for common input styles */
+@mixin common-input-styles {
+    width: $inputWidth;
+    padding: $inputPadding;
+    margin-bottom: $inputMarginBottom;
+    margin-right: $inputMarginRight;
+    border: 1px solid $inputBorderColor;
+    border-radius: $inputBorderRadius;
+}
+
+/* Common button styles */
+@mixin common-button-styles {
+    background-color: rgba(155, 211, 187, 1);
+    color: black;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+}
+
+/* Common image styles */
+@mixin common-image-styles {
+    max-width: 40px;
+}
+
+/* Common margin-left styles */
+@mixin common-margin-left-styles {
+    margin-left: 6%;
+}
+
+/* Define a mixin for button styles with parameters */
+@mixin button-styles($bg-color, $text-color, $border-radius, $margin-left, $border-color, $padding, $cursor) {
+    background-color: $bg-color;
+    color: $text-color;
+    border-radius: $border-radius;
+    margin-left: $margin-left;
+    border-color: $border-color;
+    padding: $padding;
+    border: none;
+    cursor: $cursor;
+}
+
+/* Define a mixin for common box styles */
+@mixin common-box-styles($width, $height, $z-index, $left) {
+    width: $width;
+    height: $height;
+    position: absolute;
+    z-index: $z-index;
+    left: $left;
+}
+
+/* Mixin for common button style */
+@mixin common-button-style {
+    background-color: rgba(155, 211, 187, 1);
+    color: black;
+    border-radius: 2px;
+    width: 150px;
+    height: 40px;
+    border-color: white;
+}
+
+/* Define a mixin for common paragraph styles */
+@mixin common-paragraph-styles {
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+/* Mixin for flex container */
+@mixin flex-container {
+    display: flex;
+    align-items: center;
+}
+
+/* SCSS mixin for flex display */
+@mixin flex-display {
+    display: flex;
+}
+
+/* SCSS mixin for no text decoration */
+@mixin no-text-decoration {
+    text-decoration: none;
+}
+
+/* SCSS mixin for common image button styles */
+@mixin common-img-button-styles {
+    padding: 1px 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* SCSS mixin for common image styles */
+@mixin common-styles {
+    max-width: 100%;
+    vertical-align: middle;
+    border-color: white;
+}
+
+/* SCSS mixin for adjusting left margin */
+@mixin adjust-left-margin($margin) {
+    margin-left: $margin;
+}
+
+/* Mixin for column container */
+@mixin column-container {
+    column-count: $column-container-count;
+    column-gap: $column-container-gap;
+}
+
+/* SCSS mixin for flex display */
+@mixin flex-display {
+    display: flex;
+}
+
+/* Mixin for locationAvailableRoom-container */
+@mixin locationAvailableRoom-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: $center-align-items; /* Vertically align content */
+    padding-left: 30px; /* Add left padding */
+}
+
+/* Mixin to reset margin and padding */
+@mixin reset-margin-padding {
+    margin: 0;
+    padding: 0;
+}
