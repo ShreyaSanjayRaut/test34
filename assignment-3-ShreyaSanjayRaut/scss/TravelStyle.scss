@@ -1,0 +1,491 @@
+
+/* Reset some default styles for the body */
+$class-styles: (
+  margin-left: (font-size: $font-size-turkey, color: $text-color-red),
+  CVKHotel: (font-size: $font-size-cvk-hotel, color: $text-color-cvk-hotel, font-family: $font-family-sans-serif),
+  custom-font-family: (font-family: $font-family-sans-serif),
+  custom-font: (font-size: $font-size-custom, margin-top: $margin-top-custom,margin-left: 20px),
+  start-font: (font-size: $font-size-start, color: $text-color-red)
+);
+
+body {
+    font-family: $font-family-sans-serif;
+    @include reset-margin-padding;
+    overflow-x: hidden;
+    width: width("100%");
+    height: height("100%" );
+}
+
+//for-loop to set image round borders
+
+@for $i from 1 through 5 {
+    .img-#{$i} {
+      @if $i == 1 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      } @else if $i == 3 {
+        border-top-right-radius: 20px;
+      } @else if $i == 5 {
+        border-bottom-right-radius: 20px;
+      }
+    }
+  }
+
+//nested loop to display image in grid
+.image-grid {
+    --gap: 10px;
+    --num-cols: 4;
+    --row-height: height("300px");
+  
+    box-sizing: border-box;
+    padding: var(--gap);
+    border-radius: 10px;
+  
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+  
+    > img {
+      width: width("100%");
+      height: height("100%");
+      object-fit: cover;
+    }
+  
+    &-col-2 {
+      grid-column: span 2;
+    }
+  
+    &-row-2 {
+      grid-row: span 2;
+    }
+    margin-left:20px;
+    margin-right:30px;
+  }
+
+.content {
+    padding-left: 20px;
+    background-color: rgb(252, 252, 252); 
+}
+/* Adjust margin-left for specific elements */
+.imageAvailableRoom-container h2,
+.imageAvailableRoom-container p,
+.verticleRating b {
+    margin-left: 10px; /* Add margin to the left of these specific elements */
+}
+
+/* Style for anchor links within elements with class .Turkey */
+.margin-left{
+margin-left: -40px;
+}
+
+.margin-left a {
+    @include link-styles;
+    font-size: smaller;
+}
+
+/* Loop through the list and generate CSS styles for each class */
+@each $class-name, $styles in $class-styles {
+    .#{$class-name} {
+      @each $property, $value in $styles {
+        #{$property}: $value;
+      }
+    }
+  }
+
+/* Style for elements with class .small-font */
+.small-font {
+    font-size: $font-size-small;
+}
+
+/* Style for elements with class .medium-font */
+.medium-font {
+    font-size: $font-size-medium;
+    text-align: $text-align-medium;
+    font-weight: $font-weight-medium;
+    padding-right: 30px;
+
+}
+
+/* Style for elements with class .inline-div */
+.inline-div {
+    display: inline;
+}
+
+/* Style for elements with class .container */
+.container {
+    align-items: $center-align-items;
+    float: left;
+}
+
+/* Style for elements with class .image */
+.image {
+    float: left; /* Float elements to the left */
+    padding: 5px; /* Add padding to the elements */
+}
+
+/* Apply border to the <hr> element with class .border-hr */
+hr.border-hr {
+ 
+    margin-left: 30px;
+    margin-right: 30px;
+    /* Adjust height as needed */
+}
+
+
+.imageAvailableRoom-container {
+    @include flex-center-padding(35px, normal); /* Apply mixin to the container */
+}
+
+// Define the elements you want to style using the mixin
+$elements-to-style: p, h2;
+
+@each $element in $elements-to-style {
+    .imageAvailableRoom-container #{$element} {
+        @if $element == p {
+            @include flex-center-padding(1%, bold); /* Apply mixin to paragraphs */
+        } @else if $element == h2 {
+            @include flex-center-padding(50%, bolder); /* Apply mixin to h2 elements */
+        }
+    }
+}
+
+/* Style for elements with class .plus-size */
+.plus-size {
+    font-size: 30px; /* Set font size to 30px */
+}
+
+/* Add spacing between the image and text within elements with class .imageAvailableRoom-container */
+.imageAvailableRoom-container img {
+    margin-right: 10px; /* Add right margin to images */
+    /* Adjust the margin as needed */
+}
+
+/* Style for elements with class .iframe-container */
+.iframe-container {
+    margin-left: 40px; /* Add left margin */
+    width: width("20%" ); /* Set width to 20% */
+}
+
+/* Style for elements with class .locationAvailableRoom-container */
+.locationAvailableRoom-container {
+    @include locationAvailableRoom-container;
+    margin-left: 20px;
+}
+
+/* Style for elements with class .immaplocationg within .locationAvailableRoom-container */
+.locationAvailableRoom-container .immaplocationg {
+  @include locationAvailableRoom-container;
+}
+
+
+/* Style for buttons within .locationAvailableRoom-container */
+.locationAvailableRoom-container button {
+    @include common-button-style;
+    margin-left: 1320px;
+}
+
+/* Style for paragraphs within elements with class .verticleRating */
+.verticleRating p {
+    @include common-paragraph-styles;
+    margin-left: 20px;
+}
+
+/* Style for elements with class .form-container */
+.form-container {
+    background-color: $form-container-bg-color; 
+    @include flex-container; /* Apply the flex-container mixin */
+    padding-left: 15px;
+    margin-right: 200px;
+    border-radius: 20px;
+    margin-left: -300px;
+    height:230px;
+}
+
+/* Style for elements with class .Subscribe */
+.Subscribe {
+    font-size: $subscribe-font-size;
+    font-weight: $subscribe-font-weight;
+    font-family: sans-serif;
+    border-radius:20px;
+
+}
+
+.small-fontsize{
+    
+
+    font-size: small;
+    
+}
+
+/* Style for elements with class .flex */
+.flex {
+    @include flex-container; /* Apply the flex-container mixin */
+    padding-top: 20px;
+}
+// Style for input elements of type "email"
+input[type="email"] {
+    @include common-input-styles;
+}
+
+// Style for input elements of type "submit"
+input[type="submit"] {
+    background-color: $inputEmailBgColor;
+    color: $inputEmailTextColor;
+    padding: $inputEmailPadding;
+    margin-bottom: $inputMarginBottom;
+    margin-right: $inputMarginRight;
+    border: none;
+    border-radius: $inputBorderRadius;
+    cursor: $inputEmailCursor;
+}
+
+/* Style for elements with class .list-container */
+.list-container {
+    list-style: none; /* Remove list bullet points */
+    display: flex; /* Use flexbox for layout */
+    position: absolute; /* Position absolutely */
+    bottom: -300px; /* Set bottom position */
+    left: 80px; /* Set left position */
+    color: #090909; /* Set text color */
+    padding: 10px; /* Add padding */
+    width:width("100%" );/* Set width to 100% */
+    box-sizing: border-box; /* Include padding in the width */
+    font-family: system-ui;
+}
+
+/* Style for list items within .list-container */
+.list-item {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: $margin-top-custom - 20px; /* Add spacing between list items */
+    vertical-align: top; /* Align list items to the top */
+    text-wrap: nowrap; /* Prevent text from wrapping */
+    padding-right: 60px;
+}
+
+/* Style for sub-lists */
+.sub-list {
+    list-style-type: none; /* Use a different list marker */
+    @include reset-margin-padding;
+    display: inline; /* Display sub-list items horizontally */
+    vertical-align: top; /* Align sub-list items to the top */
+}
+
+.amenities{
+    margin-left: 30px;
+}
+
+.review{
+    margin-left: 10px;
+}
+.grid-container {
+    display: flex;
+    grid-template-columns: 1fr 1fr; /* Two columns, equal width */
+    gap: 20px; /* Gap between columns */
+    align-items: center; /* Vertically center items */
+    padding: 20px;
+  }
+  
+  .review {
+    text-align: left; /* Align text to the left */
+    font-size: 24px; /* Adjust font size */
+  }
+  
+  .button-container {
+    text-align: right; /* Align text to the right */
+  }
+  
+  .button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Adjust padding */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Add hover effect */
+    margin-left: 1200px;
+  }
+  
+
+/* Usage example of the mixins */
+.image-button2 {
+    @include common-img-button-styles;
+    @include adjust-left-margin(450px);
+    color: rgb(0, 0, 0);
+}
+
+.image-button {
+    @include common-img-button-styles;
+    @include adjust-left-margin(1010px);
+    border-color: white;
+    position: relative;
+}
+
+.button-img {
+    @include common-styles;
+}
+
+/* Style for elements with class .nightPadding */
+.nightPadding {
+    justify-content: flex-end; /* Justify content to the flex-end */
+    width: width( "100%" ); /* Set width to 100% */
+    padding: 1310px; /* Add padding */
+    padding-top: 1000px; /* Add top padding */
+    color: $text-color-red; /* Set text color to red */
+}
+
+/* Style for elements with class .maplocation */
+.maplocation {
+    margin-left: -81px; /* Adjust left margin */
+    margin-top: -12px; /* Adjust top margin */
+}
+
+/* Style for elements with class .verticleRating */
+.verticleRating {
+    display: flex; /* Use flexbox for layout */
+    padding-bottom: $margin-top-custom - 30px; /* Add bottom padding */
+    margin-left:20px;
+}
+
+/* Style for elements within .verticleRating with tag <b> */
+.verticleRating b {
+    margin-left: 10px; /* Add left margin */
+    margin-top: 15px; /* Add top margin */
+}
+
+/* Use the mixin for different button classes */
+
+.image-BookNow {
+    @include button-styles(rgb(166, 238, 166), black, 2px, 10px, white, 10px 20px, pointer);
+}
+
+.viewAllPhotos {
+    @include button-styles(rgba(155, 211, 187, 1), black, 2px, 10px, white, 10px 20px, pointer);
+}
+
+.book-button {
+    @include button-styles(rgba(155, 211, 187, 1), black, 2px, 10px, white, 10px 20px, pointer);
+}
+
+/* Style for elements with class .viewmap-button */
+.viewmap-button {
+    @include common-button-styles;
+    margin-left: 1100px;
+}
+
+/* Style for elements with class .image-width */
+.image-width {
+    @include common-image-styles;
+}
+
+/* Style for elements with class .marginleft6 */
+.marginleft6 {
+    @include common-margin-left-styles;
+}
+
+/* Style for elements with class .header-image */
+.header-image {
+    margin-top: $header-image-margin-top;
+    height: $header-image-height;
+    width: $header-image-width;
+}
+
+/* Style for elements with class .flexdisplay */
+.flexdisplay {
+    @include flex-display;
+}
+
+/* Style for elements with class .footermenus */
+.footermenus {
+    color: $text-color;
+    @include no-text-decoration;
+    white-space: nowrap;
+}
+
+/* Style for elements with class .mailbox */
+.mailbox {
+    margin-left: $margin-left-mailbox;
+}
+
+/* Style for elements with class .pagination */
+.pagination {
+    font-size: large;
+    margin-top: $margin-top-pagination;
+    text-align: $center-align-items;
+    padding-bottom: 50px;
+    font-family: monospace;
+}
+
+/* Style for elements with class .flag-image */
+.flag-image {
+    @include flex-display;
+    justify-content: flex-end;
+    margin-left: $margin-left-flag-image;
+}
+
+/* Style for elements with class .googlemaplocation */
+.googlemaplocation {
+    @include flex-display;
+    align-items: $center-align-items;
+    /* padding-left: px; Invalid property (should specify a value) */
+    @extend .margin-left;
+    color: black;
+    margin-left: 5px;
+    font-size: small;
+}
+
+/* Style for elements with class .location-container */
+.location-container {
+    @include flex-display;
+    align-items: $center-align-items;
+    @extend .amenities;
+}
+
+.available-room{
+    @extend .amenities;
+} 
+
+.Overview{
+    @extend .amenities;
+    margin-right: 10px;
+}
+/* Style for elements with class .review-button */
+.review-button {
+    @include common-button-styles;
+}
+/* Style for elements with class .logo-footer-image */
+.logo-footer-image {
+    width: $footer-logo-width;
+}
+
+/* Style for elements with class .font-size-xxx-large */
+.font-size-xxx-large {
+    font-size: $font-size-xxx-large;
+}
+
+/* Style for elements with class .more-plus */
+.more-plus {
+    color: $more-plus-color;
+}
+
+/* Define the columns with class .column-container */
+.column-container {
+    @include column-container;
+}
+/* Apply mixins to elements */
+.item {
+    @include flex-align-margin(10px);
+}
+
+.item img {
+    @include item-image;
+}
+
+.overlay-button {
+    @include overlay-button;
+}
+.breadcrumb-item {
+    @include breadcrumb-item;
+}
+.breadcrumb{
+    padding-top: $menu-margin-left - 5px;
+    margin-left: 20px;
+}

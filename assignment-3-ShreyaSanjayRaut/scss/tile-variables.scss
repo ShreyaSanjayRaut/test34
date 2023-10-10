@@ -1,0 +1,15 @@
+/* Tile Styles */
+$tile-width: 150px; /* Width of the tile */
+$tile-height: 120px; /* Height of the tile */
+$tile-background-color: rgb(255, 255, 255); /* Background color of the tile */
+$tile-margin: 5px; /* Margin around the tile */
+$tile-border-color: rgba(155, 211, 187, 1); /* Border color of the tile */
+$tile-box-shadow-color: rgba(52, 152, 219, 0.5); /* Box shadow color of the tile */
+$tile-border-radius: 10px; /* Border radius of the tile */
+$tile-transition-duration: 0.3s; /* Transition duration for tile styles */
+$tile-padding-left: 10px; /* Left padding for the tile */
+$tile-first-color-background: hsl(120, 25%, 65%); /* Background color for the first color tile */
+$tile-text-font-size: smaller; /* Font size for text within the tile */
+$tile-text-margin-top: 35%; /* Margin-top for text within the tile */
+$tile-text-margin-left: 10%; /* Margin-left for text within the tile */
+$tile-first-color-h1-margin-top: -0px; /* Margin-top for h1 elements within the first color tile */

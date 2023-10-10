@@ -1,0 +1,834 @@
+@charset "UTF-8";
+/* Mixin for flexbox alignment and margin-bottom */
+/* Mixin for image styles within elements with class .item */
+/* Mixin for overlay button for displaying button over an image */
+/* Mixin for menu link styles within elements with class .menu */
+/* Mixin for hover link effect */
+/* Mixin for breadcrumb item styles */
+/* Mixin for common tile styles */
+/* Mixin for link styles */
+/* Define a mixin for common input styles */
+/* Common button styles */
+/* Common image styles */
+/* Common margin-left styles */
+/* Define a mixin for button styles with parameters */
+/* Define a mixin for common box styles */
+/* Mixin for common button style */
+/* Define a mixin for common paragraph styles */
+/* Mixin for flex container */
+/* SCSS mixin for flex display */
+/* SCSS mixin for no text decoration */
+/* SCSS mixin for common image button styles */
+/* SCSS mixin for common image styles */
+/* SCSS mixin for adjusting left margin */
+/* Mixin for column container */
+/* SCSS mixin for flex display */
+/* Mixin for locationAvailableRoom-container */
+/* Mixin to reset margin and padding */
+/* Font Families */
+/* Sans-serif font family */
+/* Font Sizes and Text Colors */
+/* Font size for Turkey */
+/* Red text color */
+/* Font size for CVK Hotel */
+/* Black text color */
+/* Custom font size */
+/* Custom margin-top */
+/* Font size for "start" */
+/* Small font size */
+/* Medium font size */
+/* Text alignment for "medium" */
+/* Font weight for "medium" */
+/* Transitions and Background Colors */
+/* Link transition duration */
+/* Background color for content */
+/* Background color for tile */
+/* Background color for the first tile */
+/* Header Styles */
+/* Background color for the header */
+/* Text color for the header */
+/* Box shadow color for the header */
+/* Header Image and Margin Styles */
+/* Margin top for the header image */
+/* Height of the header image */
+/* Width of the header image */
+/* Text color */
+/* Left margin for mailbox */
+/* Pagination and Flag Image Styles */
+/* Font size for pagination */
+/* Margin top for pagination */
+/* Left margin for flag image */
+/* Footer Styles */
+/* Width of the footer logo */
+/* Font size for xxx-large text */
+/* Color for "more" and "plus" elements */
+/* Column Container Styles */
+/* Number of columns in the container */
+/* Gap between columns in the container */
+/* Input Styles */
+/* Width of the input */
+/* Padding for the input */
+/* Margin at the bottom of the input */
+/* Margin on the right side of the input */
+/* Border color for the input */
+/* Border radius for the input */
+/* Email Input Styles */
+/* Background color for the email input */
+/* Text color for the email input */
+/* Padding for the email input */
+/* Cursor style for the email input */
+/* Box and Form Container Styles */
+/* Margin-top for the first color tile */
+/* Background color for the box */
+/* Border color for the box */
+/* Margin-top for the text inside the box */
+/* Background color for the form container */
+/* Font size for the subscribe text */
+/* Font weight for the subscribe text */
+/* Menu Styles */
+/* Left margin for the menu */
+/* Maximum height for menu images */
+/* Maximum width for menu images */
+/* Margin for menu images */
+/* Padding for menu links */
+/* Text color for menu links */
+/* Height of right-aligned menu images */
+/* Center alignment for items */
+/* Text color for links */
+/* Tile Styles */
+/* Width of the tile */
+/* Height of the tile */
+/* Background color of the tile */
+/* Margin around the tile */
+/* Border color of the tile */
+/* Box shadow color of the tile */
+/* Border radius of the tile */
+/* Transition duration for tile styles */
+/* Left padding for the tile */
+/* Background color for the first color tile */
+/* Font size for text within the tile */
+/* Margin-top for text within the tile */
+/* Margin-left for text within the tile */
+/* Margin-top for h1 elements within the first color tile */
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+ul, ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(119, 116, 116, 0.1);
+}
+
+/* Fix the navbar to the top of the viewport */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Make it span the full width of the viewport */
+  z-index: 100; /* Adjust the z-index to ensure it's above other content */
+  background: white;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.menu li {
+  display: flex;
+  align-items: center;
+}
+.menu a {
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s;
+}
+
+.menu-image img {
+  max-width: 100%;
+  max-height: 40px;
+  margin: 0 auto;
+}
+
+.left-menu {
+  margin-left: 20px;
+}
+
+.right-menu {
+  margin-right: 40px;
+}
+
+.left-menu img,
+.right-menu img {
+  width: 30px; /* Set width for images within elements with class .left-menu and .right-menu */
+  padding-left: 15px;
+}
+
+a[href="#findStay"] {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.3s;
+}
+
+.menu a {
+  text-decoration: none;
+  position: relative;
+}
+
+.menu a.hover-link:hover {
+  padding-bottom: 5px;
+  border-bottom: 5px solid #9bd3bb;
+}
+
+/* Apply the common tile styles using the mixin */
+.tile {
+  width: 150px;
+  height: 120px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px;
+  float: left;
+  border: 1px solid rgb(155, 211, 187);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  padding-left: 10px;
+}
+
+/* Style for elements with class .tile-first-color */
+.tile-first-color {
+  background-color: hsl(120, 25%, 65%);
+}
+
+/* Style for tile components */
+.tile-text {
+  font-size: smaller;
+  margin-top: 35%;
+  margin-left: 10%;
+}
+
+/* Style for h1 elements within .tile-first-color */
+.tile-first-color h1 {
+  margin-top: 0px;
+}
+
+/* Style for h1 elements within .tile-first-color */
+.tile-first-color h1 {
+  margin-top: 0px;
+}
+
+/* Style for elements with class .box */
+.box {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid #94ebc0;
+}
+
+/* Style for elements with class .box-text */
+.box-text {
+  margin-top: -3px;
+}
+
+/* Style for elements with class .box1 */
+.box1 {
+  width: 1120px;
+  position: absolute;
+  z-index: 2;
+  left: 400px;
+}
+
+/* Style for elements with class .box2 */
+.box2 {
+  width: 300px;
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Reset some default styles for the body */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.img-1 {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.img-3 {
+  border-top-right-radius: 20px;
+}
+
+.img-5 {
+  border-bottom-right-radius: 20px;
+}
+
+.image-grid {
+  --gap: 10px;
+  --num-cols: 4;
+  --row-height: height("300px");
+  box-sizing: border-box;
+  padding: var(--gap);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+  margin-left: 20px;
+  margin-right: 30px;
+}
+.image-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+.image-grid-row-2 {
+  grid-row: span 2;
+}
+
+.content {
+  padding-left: 20px;
+  background-color: rgb(252, 252, 252);
+}
+
+/* Adjust margin-left for specific elements */
+.imageAvailableRoom-container h2,
+.imageAvailableRoom-container p,
+.verticleRating b {
+  margin-left: 10px; /* Add margin to the left of these specific elements */
+}
+
+/* Style for anchor links within elements with class .Turkey */
+.margin-left, .googlemaplocation {
+  margin-left: -40px;
+}
+
+.margin-left a, .googlemaplocation a {
+  color: red;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: smaller;
+}
+
+/* Loop through the list and generate CSS styles for each class */
+.margin-left, .googlemaplocation {
+  font-size: 1.2em;
+  color: red;
+}
+
+.CVKHotel {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+}
+
+.custom-font-family {
+  font-family: sans-serif;
+}
+
+.custom-font {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.start-font {
+  font-size: 18px;
+  color: red;
+}
+
+/* Style for elements with class .small-font */
+.small-font {
+  font-size: 12px;
+}
+
+/* Style for elements with class .medium-font */
+.medium-font {
+  font-size: 18px;
+  text-align: justify;
+  font-weight: 100;
+  padding-right: 30px;
+}
+
+/* Style for elements with class .inline-div */
+.inline-div {
+  display: inline;
+}
+
+/* Style for elements with class .container */
+.container {
+  align-items: center;
+  float: left;
+}
+
+/* Style for elements with class .image */
+.image {
+  float: left; /* Float elements to the left */
+  padding: 5px; /* Add padding to the elements */
+}
+
+/* Apply border to the <hr> element with class .border-hr */
+hr.border-hr {
+  margin-left: 30px;
+  margin-right: 30px;
+  /* Adjust height as needed */
+}
+
+.imageAvailableRoom-container {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
+  font-weight: normal;
+  /* Apply mixin to the container */
+}
+
+.imageAvailableRoom-container p {
+  display: flex;
+  align-items: center;
+  padding-left: 1%;
+  font-weight: bold;
+  /* Apply mixin to paragraphs */
+}
+
+.imageAvailableRoom-container h2 {
+  display: flex;
+  align-items: center;
+  padding-left: 50%;
+  font-weight: bolder;
+  /* Apply mixin to h2 elements */
+}
+
+/* Style for elements with class .plus-size */
+.plus-size {
+  font-size: 30px; /* Set font size to 30px */
+}
+
+/* Add spacing between the image and text within elements with class .imageAvailableRoom-container */
+.imageAvailableRoom-container img {
+  margin-right: 10px; /* Add right margin to images */
+  /* Adjust the margin as needed */
+}
+
+/* Style for elements with class .iframe-container */
+.iframe-container {
+  margin-left: 40px; /* Add left margin */
+  width: 20%; /* Set width to 20% */
+}
+
+/* Style for elements with class .locationAvailableRoom-container */
+.locationAvailableRoom-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align content */
+  padding-left: 30px; /* Add left padding */
+  margin-left: 20px;
+}
+
+/* Style for elements with class .immaplocationg within .locationAvailableRoom-container */
+.locationAvailableRoom-container .immaplocationg {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align content */
+  padding-left: 30px; /* Add left padding */
+}
+
+/* Style for buttons within .locationAvailableRoom-container */
+.locationAvailableRoom-container button {
+  background-color: rgb(155, 211, 187);
+  color: black;
+  border-radius: 2px;
+  width: 150px;
+  height: 40px;
+  border-color: white;
+  margin-left: 1320px;
+}
+
+/* Style for paragraphs within elements with class .verticleRating */
+.verticleRating p {
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+/* Style for elements with class .form-container */
+.form-container {
+  background-color: rgb(203, 235, 233);
+  display: flex;
+  align-items: center;
+  /* Apply the flex-container mixin */
+  padding-left: 15px;
+  margin-right: 200px;
+  border-radius: 20px;
+  margin-left: -300px;
+  height: 230px;
+}
+
+/* Style for elements with class .Subscribe */
+.Subscribe {
+  font-size: x-large;
+  font-weight: 800;
+  font-family: sans-serif;
+  border-radius: 20px;
+}
+
+.small-fontsize {
+  font-size: small;
+}
+
+/* Style for elements with class .flex */
+.flex {
+  display: flex;
+  align-items: center;
+  /* Apply the flex-container mixin */
+  padding-top: 20px;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type=submit] {
+  background-color: #1e2e16;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for elements with class .list-container */
+.list-container {
+  list-style: none; /* Remove list bullet points */
+  display: flex; /* Use flexbox for layout */
+  position: absolute; /* Position absolutely */
+  bottom: -300px; /* Set bottom position */
+  left: 80px; /* Set left position */
+  color: #090909; /* Set text color */
+  padding: 10px; /* Add padding */
+  width: 100%; /* Set width to 100% */
+  box-sizing: border-box; /* Include padding in the width */
+  font-family: system-ui;
+}
+
+/* Style for list items within .list-container */
+.list-item {
+  display: inline-block; /* Display list items horizontally */
+  margin-right: 20px; /* Add spacing between list items */
+  vertical-align: top; /* Align list items to the top */
+  text-wrap: nowrap; /* Prevent text from wrapping */
+  padding-right: 60px;
+}
+
+/* Style for sub-lists */
+.sub-list {
+  list-style-type: none; /* Use a different list marker */
+  margin: 0;
+  padding: 0;
+  display: inline; /* Display sub-list items horizontally */
+  vertical-align: top; /* Align sub-list items to the top */
+}
+
+.amenities, .Overview, .available-room, .location-container {
+  margin-left: 30px;
+}
+
+.review {
+  margin-left: 10px;
+}
+
+.grid-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr; /* Two columns, equal width */
+  gap: 20px; /* Gap between columns */
+  align-items: center; /* Vertically center items */
+  padding: 20px;
+}
+
+.review {
+  text-align: left; /* Align text to the left */
+  font-size: 24px; /* Adjust font size */
+}
+
+.button-container {
+  text-align: right; /* Align text to the right */
+}
+
+.button {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px; /* Adjust padding */
+  border: none; /* Remove button border */
+  cursor: pointer; /* Add hover effect */
+  margin-left: 1200px;
+}
+
+/* Usage example of the mixins */
+.image-button2 {
+  padding: 1px 1px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 450px;
+  color: rgb(0, 0, 0);
+}
+
+.image-button {
+  padding: 1px 1px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1010px;
+  border-color: white;
+  position: relative;
+}
+
+.button-img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-color: white;
+}
+
+/* Style for elements with class .nightPadding */
+.nightPadding {
+  justify-content: flex-end; /* Justify content to the flex-end */
+  width: 100%; /* Set width to 100% */
+  padding: 1310px; /* Add padding */
+  padding-top: 1000px; /* Add top padding */
+  color: red; /* Set text color to red */
+}
+
+/* Style for elements with class .maplocation */
+.maplocation {
+  margin-left: -81px; /* Adjust left margin */
+  margin-top: -12px; /* Adjust top margin */
+}
+
+/* Style for elements with class .verticleRating */
+.verticleRating {
+  display: flex; /* Use flexbox for layout */
+  padding-bottom: 10px; /* Add bottom padding */
+  margin-left: 20px;
+}
+
+/* Style for elements within .verticleRating with tag <b> */
+.verticleRating b {
+  margin-left: 10px; /* Add left margin */
+  margin-top: 15px; /* Add top margin */
+}
+
+/* Use the mixin for different button classes */
+.image-BookNow {
+  background-color: rgb(166, 238, 166);
+  color: black;
+  border-radius: 2px;
+  margin-left: 10px;
+  border-color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.viewAllPhotos {
+  background-color: rgb(155, 211, 187);
+  color: black;
+  border-radius: 2px;
+  margin-left: 10px;
+  border-color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.book-button {
+  background-color: rgb(155, 211, 187);
+  color: black;
+  border-radius: 2px;
+  margin-left: 10px;
+  border-color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for elements with class .viewmap-button */
+.viewmap-button {
+  background-color: rgb(155, 211, 187);
+  color: black;
+  border-radius: 2px;
+  width: 150px;
+  height: 40px;
+  margin-left: 1100px;
+}
+
+/* Style for elements with class .image-width */
+.image-width {
+  max-width: 40px;
+}
+
+/* Style for elements with class .marginleft6 */
+.marginleft6 {
+  margin-left: 6%;
+}
+
+/* Style for elements with class .header-image */
+.header-image {
+  margin-top: 50px;
+  height: 400px;
+  width: 1510px;
+}
+
+/* Style for elements with class .flexdisplay */
+.flexdisplay {
+  display: flex;
+}
+
+/* Style for elements with class .footermenus */
+.footermenus {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Style for elements with class .mailbox */
+.mailbox {
+  margin-left: 300px;
+}
+
+/* Style for elements with class .pagination */
+.pagination {
+  font-size: large;
+  margin-top: -35px;
+  text-align: center;
+  padding-bottom: 50px;
+  font-family: monospace;
+}
+
+/* Style for elements with class .flag-image */
+.flag-image {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 800px;
+}
+
+/* Style for elements with class .googlemaplocation */
+.googlemaplocation {
+  display: flex;
+  align-items: center;
+  /* padding-left: px; Invalid property (should specify a value) */
+  color: black;
+  margin-left: 5px;
+  font-size: small;
+}
+
+/* Style for elements with class .location-container */
+.location-container {
+  display: flex;
+  align-items: center;
+}
+
+.Overview {
+  margin-right: 10px;
+}
+
+/* Style for elements with class .review-button */
+.review-button {
+  background-color: rgb(155, 211, 187);
+  color: black;
+  border-radius: 2px;
+  width: 150px;
+  height: 40px;
+}
+
+/* Style for elements with class .logo-footer-image */
+.logo-footer-image {
+  width: 100px;
+}
+
+/* Style for elements with class .font-size-xxx-large */
+.font-size-xxx-large {
+  font-size: xxx-large;
+}
+
+/* Style for elements with class .more-plus */
+.more-plus {
+  color: red;
+}
+
+/* Define the columns with class .column-container */
+.column-container {
+  column-count: 2;
+  column-gap: 20px;
+}
+
+/* Apply mixins to elements */
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item img {
+  max-width: 20px;
+  margin-right: 10px;
+}
+
+.overlay-button {
+  position: absolute;
+  top: 105%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(155, 211, 187);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.breadcrumb-item {
+  display: inline;
+  margin-right: 20px;
+  position: relative;
+  color: black;
+}
+.breadcrumb-item:not(:last-child)::after {
+  content: " > ";
+  position: absolute;
+  right: -23px;
+  font-size: 20px; /* Corrected from "size" to "font-size" */
+  color: black;
+  font-weight: bolder;
+}
+
+.breadcrumb {
+  padding-top: 5px;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
