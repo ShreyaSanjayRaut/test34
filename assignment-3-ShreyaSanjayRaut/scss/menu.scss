@@ -1,0 +1,81 @@
+// Apply SCSS variables to styles nested loop
+a {
+    text-decoration: none;
+    color: $link-text-color;
+  }
+
+ul {
+  @include reset-margin-padding;
+  list-style: none;
+
+  li {
+    @extend ul;
+  }
+}
+
+header {
+    background-color: $header-background-color;
+    color: $header-text-color;
+    padding: $margin-top-custom - 30px;
+    box-shadow: 0px 4px 6px $header-box-shadow-color;
+}
+/* Fix the navbar to the top of the viewport */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: width("100%"); /* Make it span the full width of the viewport */
+    z-index: 100; /* Adjust the z-index to ensure it's above other content */
+    background: white;
+}
+
+//nested selectors
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: $center-align-items;
+    padding-bottom: 20px;
+    padding-top: 10px;
+
+    li {
+        display: flex;
+        align-items: $center-align-items;
+    }
+
+    a {
+        padding: $menu-link-padding;
+        color: $menu-link-color;
+        transition: background-color $link-transition-duration;
+    }
+
+}
+
+.menu-image img {
+    max-width: $menu-image-max-width;
+    max-height: $menu-image-max-height;
+    margin: $menu-image-margin;
+}
+.left-menu{
+    margin-left: 20px;
+}
+.right-menu{
+    margin-right: 40px;
+}
+.left-menu img,
+.right-menu img {
+    width: 30px; /* Set width for images within elements with class .left-menu and .right-menu */
+    padding-left: 15px;
+}
+a[href="#findStay"] {
+    text-decoration: none;
+    color: $link-text-color;
+    transition: background-color $link-transition-duration;
+}
+
+.menu a {
+    @include menu-link;
+}
+
+.menu a.hover-link {
+    @include hover-link-effect;
+}

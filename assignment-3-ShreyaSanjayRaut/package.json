@@ -1,0 +1,14 @@
+{
+  "name": "assignment-3-shreyasanjayraut",
+  "version": "1.0.0",
+  "description": "Welcome to the Travel Explorer project! This web design project is dedicated to showcasing the beauty of travel destinations and providing valuable travel information. Here, you'll find everything you need to know about the project, how to set it up, and how to contribute.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}

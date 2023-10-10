@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Travel Details</title>
+    <link rel="stylesheet" href="dist/main.css" />
+
+    <!-- To perform form validation on email input type -->
+    <script>
+        const email = document.getElementById("email");
+        try {
+            email.addEventListener("input", (event) => {
+                if (email.validity.typeMismatch) {
+                    email.setCustomValidity("I am expecting an email address!");
+                } else if (!email.value.trim()) {
+
+                    email.setCustomValidity("Please enter an email ID");
+                } else {
+                    email.setCustomValidity("");
+                }
+            });
+        } catch (error) {
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <!--To show the menu bar-->
+        <ul class="navbar menu">
+            <li class="left-menu">
+                <img src="images/airplane.PNG" alt="Centered Image">
+                <a href="#findFlight" class="hover-link">Find Flight</a>
+                <img class="findStay1" src="images/findStay2.PNG" alt="Centered Image">
+                <a href="#findStay" class="hover-link">Find Stay</a>
+            </li>
+            <li class="menu-image">
+                <img src="images/Logo.png" alt="Centered Image">
+            </li>
+            <li class="right-menu">
+                <img src="images/heart.PNG" alt="Centered Image" width="25px" height="35px">
+                <a href="#Favourites">Favourites | </a>
+                <img src="images/user9.PNG" alt="Centered Image" width="25px" height="35px">
+                <a href="#John">John </a>
+            </li>
+        </ul>
+    </header>
+
+    <div id="findStay" class="content">
+        <!-- Find Flight page content -->
+        <br><br>
+        <!--To show Hotel details-->
+        <nav aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+                <div class="margin-left">
+                    <li class="breadcrumb-item"><a href="#">Turkey</a></li>
+                    <li class="breadcrumb-item"><a href="#">Istanbul</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">CVK Park Bosphours Hotel Instanbul</li>
+                </div>
+            </ol>
+        </nav>
+
+        <div class="custom-font">CVK Park Bosphours Hotel Instanbul &nbsp;
+            <p class="inline-div start-font"> &#9733; &#9733; &#9733; &#9733; &#9733; </p>
+            <p class="inline-div small-font"> &nbsp; 5 Star Hotel</p>
+            <p class="inline-div nightPadding"><b class="plus-size">$240</b>/night</p>
+        </div>
+
+
+        <div class="locationAvailableRoom-container">
+            <img class="maplocation" src="images/icons/Location.svg"> Gumussuyu Mah, Inonu Cad, No:8, Istanbul 34473
+            </img>
+        </div>
+        <div class="verticleRating">
+            <div class="box">
+                <div class="box-text">4.2</div>
+            </div>
+            <b>Very Good</b>
+            <p class="'reviewpost">371 reviews </p>
+            <div class="image-button">
+                <button> <img src="images/love.PNG" alt="Heart Image" class="button-img" width="20px" height="35px" />
+                </button>
+                <button> <img src="images/share.PNG" alt="Heart Image" class="button-img" width="20px"
+                        height="35px" /></button>
+                <button class="book-button">Book Now</button>
+            </div>
+        </div>
+
+        <div class="image-grid">
+            <img class="image-grid-col-2 image-grid-row-2 img-1" src="images/Hotel1.webp" alt="This is my image." />
+            <img src="images/Hotel2.jpg" alt="This is my image." />
+            <img src="images/Hotel3.jfif" class="img-3" alt="This is my image." />
+            <img src="images/Hotel4.jfif" alt="This is my image." />
+            <img src="images/Hotel5.jpg" class="img-5" alt="This is my image."> <button class="overlay-button">View All
+                Photos</button>
+        </div>
+
+    </div>
+
+
+    <hr class="border-hr">
+    <!--Overview Section-->
+    <div class="Overview">
+        <h2 class="custom-font-family">Overview</h2>
+        <section>
+            <article class="medium-font"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem odit
+                temporibus, distinctio incidunt est enim corrupti obcaecati ratione vero nulla, quasi eius magni
+                necessitatibus quidem perferendis et maiores id facilis ex esse tempore architecto? Non eius inventore,
+                dicta commodi soluta suscipit quaerat corrupti impedit exercitationem placeat obcaecati aut cum quod
+                reiciendis at laboriosam voluptatum cumque officiis eaque debitis libero saepe? Aliquid dicta saepe
+                perspiciatis non, ab praesentium dolorem, hic, vero similique perferendis architecto iusto accusantium!
+                Dolorum recusandae, iusto, cumque commodi libero impedit velit ipsam blanditiis eligendi ducimus eos
+                magni
+                adipisci sequi quaerat aut assumenda. Saepe veritatis exercitationem animi!</article>
+        </section>
+        <br>
+
+        <!--To display tiles-->
+        <div class="tile tile-first-color">
+            <h1>4.2 </h1>
+            <h1 class="medium-font"> <strong><b> Very good </strong></b> <br> 371 review</h1>
+        </div>
+        <div class="tile"><img src="images/icons/Stars.svg" alt="This is my image." height="41px" />
+            <h1 class="tile-text">Near park </h1>
+        </div>
+        <div class="tile">
+            <img src="images/icons/Stars.svg" alt="This is my image." height="41px" />
+            <h1 class="tile-text">Near nightlife </h1>
+        </div>
+        <div class="tile">
+            <img src="images/icons/Stars.svg" alt="This is my image." height="41px" />
+            <h1 class="tile-text">Near theater </h1>
+        </div>
+        <div class="tile">
+            <img src="images/icons/Stars.svg" alt="This is my image." height="41px" />
+            <h1 class="tile-text">Clean Hotel </h1>
+        </div>
+    </div>
+    <!--End of tiles-->
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <hr class="border-hr">
+
+    <!--To display Avalible Roooms-->
+    <h1 class="font-family available-room">Available Rooms</h1>
+    <div class="imageAvailableRoom-container">
+        <img src="images/room1.jfif" width="50" height="50" />
+        <p>Superier room - 1 double bed or 2 twin bed</p>
+        <h2> <b class="plus-size">$240 </b></h2> /night &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="book-button">Book Now</button>
+    </div>
+    <hr class="border-hr">
+    <div class="imageAvailableRoom-container">
+        <img src="images/room2.jfif" width="50" height="50" />
+        <p>Superier room - 1 double bed or 2 twin bed</p>
+        <h2> <b class="plus-size">$240 </b></h2> /night &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="book-button">Book Now</button>
+    </div>
+    <hr class="border-hr">
+    <div class="imageAvailableRoom-container">
+        <img src="images/room3.jfif" width="50" height="50" />
+        <p>Superier room - 1 double bed or 2 twin bed</p>
+        <h2> <b class="plus-size">$240 </b> </h2>/night &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="book-button">Book Now</button>
+    </div>
+    <hr class="border-hr">
+    <div class="imageAvailableRoom-container">
+        <img src="images/room4.jfif" width="50" height="50" />
+        <p>Superier room - 1 double bed or 2 twin bed</p>
+        <h2> <b class="plus-size">$240 </b></h2> /night &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="book-button">Book Now</button>
+    </div>
+    <hr class="border-hr">
+    <div class="imageAvailableRoom-container">
+        <img src="images/room5.jfif" width="50" height="50" />
+        <p>Superier room - 1 double bed or 2 twin bed</p>
+        <h2> <b class="plus-size">$240 </b></h2> /night &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="book-button">Book Now</button>
+    </div>
+    <br>
+    <hr class="border-hr">
+    <!--End of Available Room section-->
+    <br>
+    <!--To display Location/Map section-->
+    <div class="location-container">
+        <h2 class="font-family">Location/Map
+            <button class="viewmap-button"> View on google maps</button>
+        </h2>
+    </div>
+    <br><br>
+    <div class="iframe-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8009260301054!2d-73.98542898457359!3d40.74881787215091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fb3cd35305%3A0xfdf15ad66e648b1d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1626795575121!5m2!1sen!2sus"
+            width="1400" height="450" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="googlemaplocation">
+        <img src="images/icons/Location.svg" width="50px"/> Gumussuyu Mah, Inonu Cad, No:8, Istanbul 34473
+    </div>
+
+    <hr class="border-hr">
+    <!--End of Location/Map section-->
+    <!--To display amenities section-->
+    <div class="amenities">
+        <h2 class="font-family">Amenities</h2>
+        <div class="font-family">
+            <div class="column-container">
+                <div class="item">
+                    <img src="images/outdoor.PNG">
+                    Outdoor pool
+                </div>
+                <div class="item">
+                    <img src="images/outdoor.PNG" alt="Image 3">
+                    Indoor pool
+                </div>
+                <div class="item">
+                    <img src="images/spa.PNG" alt="Image 3">
+                    Spa and wellness center
+                </div>
+                <div class="item">
+                    <img src="images/res.PNG" alt="Image 4">
+                    Restaurant
+                </div>
+                <div class="item">
+                    <img src="images/room.PNG" alt="Image 6">
+                    Room Service
+                </div>
+                <div class="item">
+                    <img src="images/fitness.PNG">
+                    Fitness center
+                </div>
+                <div class="item">
+                    <img src="images/bar.PNG" alt="Image 6">
+                    Bar / Lounge
+                </div>
+                <div class="item">
+                    <img src="images/wifi.PNG">
+                    Free Wi-Fi
+                </div>
+                <div class="item">
+                    <img src="images/Tea.PNG" alt="Image 6">
+                    Tea/Coffee service
+                </div>
+
+                <div class="item">
+                    <a class="more-plus" href="#">
+                        +24 more
+                    </a>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--End of Amenities section-->
+    <br>
+
+    <hr class="border-hr">
+    <!--To display Reviews-->
+    <div class="grid-container">
+        <div class="review">Review</div>
+        <div class="button-container">
+            <button class="review-button button">Give your review</button>
+        </div>
+    </div>
+
+    <div class="font-family">
+        <div class="imageAvailableRoom-container">
+            <b class="font-size-xxx-large">4.2</b>
+            <p>Very good <br>
+                375 verified reviews
+            </p>
+        </div>
+        <hr class="border-hr">
+
+        <div class="imageAvailableRoom-container">
+            <img src="images/user9.PNG" width="50" height="50" />
+            <p>5.2 Amazing | Omar Siphron<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus.
+            </p>
+            <img src="images/icons/Flag.svg" width="50" height="50" class="flag-image" />
+
+        </div>
+
+        <hr class="border-hr">
+        <div class="imageAvailableRoom-container">
+            <img src="images/user8.PNG" width="50" height="50" />
+            <p>5.0 Amazing | Liam Peter<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus.
+            </p>
+            <img src="images/icons/Flag.svg" width="50" height="50" class="flag-image" />
+        </div>
+
+        <hr class="border-hr">
+        <div class="imageAvailableRoom-container">
+            <img src="images/user5.PNG" width="50" height="50" />
+            <p>5.2 Amazing | Leon Ross<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus.
+            </p>
+            <img src="images/icons/Flag.svg" width="50" height="50" class="flag-image" />
+        </div>
+
+        <hr class="border-hr">
+        <div class="imageAvailableRoom-container">
+            <img src="images/user6.PNG" width="50" height="50" />
+            <p>5.2 Amazing | Kavin Peterson<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus.
+            </p>
+            <img src="images/icons/Flag.svg" width="50" height="50" class="flag-image" />
+        </div>
+
+        <hr class="border-hr">
+        <div class="imageAvailableRoom-container">
+            <img src="images/user7.PNG" width="50" height="50" />
+            <p>5.2 Amazing | Braat Holdman<br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus.
+            </p>
+            <img src="images/icons/Flag.svg" width="50" height="50" class="flag-image" />
+        </div>
+
+        <hr class="border-hr">
+        <br><br>
+        <!--Pagination-->
+        <div>
+            <h1 class="pagination">
+                <a href=""> &lt; </a> 1 of 40
+                <a href=""> &gt; </a>
+            </h1>
+        </div>
+        <br>
+        <!--End of Review section-->
+        <!--To display footer section-->
+        <div class="box2">
+            <img src="images/Header.PNG" class="header-image" />
+            <ul class="list-container">
+
+                <li class="list-item">
+
+                    <ul class="sub-list">
+
+                        <li><img src="images/icons/globe.png" class="logo-footer-image" /></li>
+                        <div class="flexdisplay">
+
+                            <li><a class="footermenus" href="#canada"><img src="images/facebook.PNG" /></a></li>
+                            <li><a class="footermenus" href="#canada"><img src="images/Twitter.PNG" /></a></li>
+                            <li><a class="footermenus" href="#canada"><img src="images/YouTube.PNG" /></a></li>
+                            <li><a class="footermenus" href="#canada"><img src="images/instagram.PNG" /></a></li>
+
+
+                            <li></li>
+                        </div>
+                    </ul>
+
+                </li>
+
+                <li class="list-item">
+
+                    <ul class="sub-list">
+
+                        <li class="listheader"><b>Our Destination</b></li>
+
+                        <br />
+
+                        <li><a class="footermenus" href="#canada">Canada</a></li>
+                        <li><a class="footermenus" href="#France">France</a></li>
+                        <li><a class="footermenus" href="#France">Alska</a></li>
+                        <li><a class="footermenus" href="#France">Iceland</a></li>
+
+
+                    </ul>
+
+                </li>
+
+                <li class="list-item">
+
+                    <ul class="sub-list">
+
+                        <li class="listheader"><b>Our Activities</b></li>
+
+                        <br />
+
+                        <li class="listbottom">
+                            <a class="footermenus" href="#France">Northern Lights
+                        </li>
+
+                        <li class="listbottom"><a a class="footermenus" href="#France"></a>Crusing
+                            and Sailing</li>
+
+                        <li class="listbottom"> <a a class="footermenus" href="#France"></a>Multi-activities</li>
+
+                        <li class="listbottom"> <a a class="footermenus" href="#France"></a>Kayaing</li>
+
+                    </ul>
+
+                </li>
+
+                <li class="list-item">
+
+                    <ul class="sub-list">
+
+                        <li class="listheader"><b>Travel Blogs</b></li>
+
+                        <br />
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"></a>Bali
+                            Travel Guides</li>
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"></a>Sri
+                            Lanka Travel Guides</li>
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"></a>Peru
+                            Travel Guides</li>
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"></a>Bali
+                            Travel Guides</li>
+
+                    </ul>
+
+                </li>
+
+                <li class="list-item">
+
+                    <ul class="sub-list">
+
+                        <li class="listheader"><b>About Us</b></li>
+
+                        <br />
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"> </a>Our
+                            Story</li>
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"></a>Work
+                            with us</li>
+
+                    </ul>
+
+                </li>
+
+                <li class="list-item">
+
+                    <ul class="sub-list">
+
+                        <li class="listheader"><b>Contact Us</b></li>
+
+                        <br />
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"> </a>Our
+                            Story</li>
+
+                        <li class="listbottom"> <a class="footermenus" href="#France"> </a>Work
+                            with us</li>
+
+                    </ul>
+
+                </li>
+
+            </ul>
+        </div>
+        <div class="box1">
+            <!--Form to get user input-->
+            <form>
+                <div class="form-container">
+                    <div class="form-content">
+                        <div class="Subscribe">
+                            <p>Subscribe <br> Newsletter</p>
+                        </div>
+                        <span> The Travel </span> <br> <span class="small-fontsize"> Get Inspired! Receive Travel discounts, tips, and behind-the-scenes stories. </span>
+                        <div class="flex">
+                            <input type="email" id="email" name="email" placeholder="Your email address">
+                            <input type="submit" value="Subscribe">
+                        </div>
+                    </div>
+                    
+                    <img src="images/mailbox.PNG" alt="Your Image" width="150" height="200" class="mailbox">
+                </div>
+            </form>
+            <!--End of Form-->
+        </div>
+    </div>
+    <!--End of Footer section-->
+    </div>
+    </div>
+</body>
+
+</html>

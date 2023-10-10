@@ -1,0 +1,25 @@
+@function invert($color, $amount: 100%) {
+    $inverse: change-color($color, $hue: hue($color) + 180);
+    @return mix($inverse, $color, $amount);
+}
+//Define map of width
+$width-map: ("100%":100%, "20%": 20%,"40px":40px,"20px":20px);
+
+@function width($width-name){
+    @return map-get($width-map , $width-name)
+  }
+
+  
+//Define map of height
+$height-map: ("100%":100%, "300px": 300px,"40px":40px,"1px":1px);
+
+@function height($height-name){
+    @return map-get($height-map , $height-name)
+  }
+
+//Define map of alignment
+$align-map: ("left":left, "right": right,"center":center);
+
+@function align($align-name){
+    @return map-get($align-map , $align-name)
+  }
